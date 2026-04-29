@@ -143,10 +143,10 @@ post {
 
 ## 수동 구성 항목
 
-아래 항목은 Ansible 모듈 미지원으로 콘솔에서 직접 구성했습니다.
+아래 항목은 콘솔에서 직접 구성했습니다.
 
-| 항목 | 설명 |
-|------|------|
-| S3 버킷 (`user03-codedeploy-bucket`) | 배포 번들 저장소 |
-| CodeDeploy 애플리케이션 (`user03-code-deploy`) | 배포 애플리케이션 |
-| CodeDeploy 배포 그룹 (`user03-app-code-deploy`) | ASG 연동 배포 그룹 |
+| 항목 | 설명 | 이유 |
+|------|------|------|
+| S3 버킷 (`user03-codedeploy-bucket`) | 배포 번들 저장소 | 배포 환경 구성 항목으로 IaC 범위 외 |
+| CodeDeploy 애플리케이션 (`user03-code-deploy`) | 배포 애플리케이션 | Ansible 모듈 미지원 |
+| CodeDeploy 배포 그룹 (`user03-app-code-deploy`) | ASG 연동 배포 그룹 | Ansible 모듈 미지원 |
