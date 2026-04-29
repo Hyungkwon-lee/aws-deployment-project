@@ -1,8 +1,8 @@
 # aws-deployment-project
 
 Jenkins + Docker Hub + CodeDeploy 기반 AWS EC2 자동 배포 파이프라인 구성입니다.  
-→ 프로젝트 전체 개요는 [infra-portfolio](https://github.com/kwony93/infra-portfolio) 참고  
-→ AWS 인프라 구성은 [ansible-iac-project](https://github.com/kwony93/ansible-iac-project) 참고
+→ 프로젝트 전체 개요는 [infra-portfolio](https://github.com/Hyungkwon-lee/infra-portfloio.git) 참고  
+→ AWS 인프라 구성은 [ansible-iac-project](https://github.com/Hyungkwon-lee/ansible-iac-project) 참고
 
 ---
 
