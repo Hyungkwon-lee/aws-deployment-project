@@ -8,12 +8,14 @@ CodeDeploy가 ASG 인스턴스에 배포를 수행합니다.
 
 ## 배포 흐름
 
+```
 Jenkins 파이프라인
 → Maven Build → Docker Build → Docker Hub Push → 로컬 이미지 삭제
 → 배포 번들 생성 (appspec.yml + scripts/)
 → S3 업로드
 → CodeDeploy 배포 트리거
 → EC2: ApplicationStop → ApplicationStart
+```
 
 ---
 
