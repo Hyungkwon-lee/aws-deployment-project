@@ -1,0 +1,28 @@
+version: 0.0
+os: linux
+# 다운로드 받은 파일을
+# 작업 Directory로 복사
+files:
+  - source: /
+    destination: /home/ubuntu
+    overwrite: yes                       #덮어쓰기 옵션
+files_exists_behavior: OVERWRITE         #덮어쓰기 옵션(혹시 안될 때 대비)
+
+# 실행 Directory 권한 설정
+permissions:
+  - object: /home/ubuntu
+    pattern: "**"
+    owner: ubuntu
+    group: ubuntu
+
+#
+hooks:
+  ApplicationStop:
+    - location: scripts/kill_process.sh  #Container kill
+      timeout: 100
+      runas: ubuntu
+      
+  ApplicationStart:
+    - location: scripts/run_process.sh
+      timeout: 300
+      runas: ubuntu
